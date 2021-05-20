@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content %}
+
+<h4 class="text-center pt-2 mt-5">Employee Panel</h4>
+
+<h4 class="text-center pt-2 mt-5">Details</h4>
+<table class="table table-bordered" id="emptable">
+  <thread>
+    <tr>
+      <th scope="col">Email ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Joining Date</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Salary</th>
+      <th scope="col">Admin Status</th>
+    </tr>
+  </thread>
+  <tbody>
+    {% for item in lst %}
+    <tr>
+      <td>{{ item.email }}</td>
+      <td>{{ item.first_Name }}</td>
+      <td>{{ item.last_Name }}</td>
+      <td>{{ item.joining_Date }}</td>
+      <td>{{ item.gender }}</td>
+      <td>{{ item.salary }}</td>
+      <td>{{ item.is_admin }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
